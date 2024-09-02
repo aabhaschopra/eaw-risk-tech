@@ -24,16 +24,16 @@ function startGame(playerName) {
         width: 20,
         height: 20,
         gravity: 0.2,  // Further slowed down gravity
-        lift: -4,  // Adjusted lift for easier play
+        lift: -5,  // Adjusted lift for easier play
         velocity: 0
     };
 
     // Pipe properties
     const pipes = [];
     const pipeWidth = 20;
-    const pipeGap = 300;  // Significantly increased gap for easier play
+    const pipeGap = 200;  // Significantly increased gap for easier play
     let frame = 0;
-    const speed = 0.8;  // Further slowed down pipe movement
+    const speed = 0.7;  // Further slowed down pipe movement
 
     function drawBird() {
         ctx.fillStyle = "yellow";
@@ -49,7 +49,7 @@ function startGame(playerName) {
     }
 
     function updatePipes() {
-        if (frame % 140 === 0) {  // Slower pipe creation rate
+        if (frame % 200 === 0) {  // Slower pipe creation rate
             const pipeHeight = Math.random() * (canvas.height - pipeGap);
             pipes.push({
                 x: canvas.width,
